@@ -27,6 +27,7 @@ export default defineNuxtConfig({
       title: 'Icarus Craft Calculator',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'referrer', content: 'no-referrer' },
         { name: 'theme-color', content: '#0f172a' },
       ],
     },

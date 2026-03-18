@@ -17,6 +17,7 @@ defineProps<{
         :src="item.icon"
         :alt="item.name"
         class="w-full h-full object-contain rounded"
+        referrerpolicy="no-referrer"
         @error="($event.target as HTMLImageElement).style.display='none'"
       />
     </div>

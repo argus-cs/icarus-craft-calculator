@@ -16,12 +16,13 @@ export function findItemById(items: Item[], id: string): Item | undefined {
   return items.find(item => item.id === id)
 }
 
+// Global shared state — persists across page navigations
+const data = ref<ItemsData | null>(null)
+const category = ref<Category | null>(null)
+const query = ref('')
+
 // Composable
 export function useItems() {
-  const data = ref<ItemsData | null>(null)
-  const category = ref<Category | null>('tools')
-  const query = ref('')
-
   const items = computed(() => data.value?.items ?? [])
 
   const filteredItems = computed(() => {

@@ -95,6 +95,7 @@ defineExpose({ open })
                     :src="current.item.icon"
                     :alt="current.item.name"
                     class="w-full h-full object-contain rounded-lg"
+                    referrerpolicy="no-referrer"
                     @error="($event.target as HTMLImageElement).style.display='none'"
                   />
                 </div>
