@@ -32,7 +32,7 @@ export function parseTier(wikitext: string): string | null {
  */
 export function parseBench(benchField: string): string[] {
   const stations: string[] = []
-  const pattern = /\{\{(?:ItemIconLink|Icon Link)\|([^}]+)\}\}/g
+  const pattern = /\{\{(?:ItemIconLink|Icon Link)\|([^|}]+)/g
   let match
   while ((match = pattern.exec(benchField)) !== null) {
     const name = match[1].trim()
@@ -52,7 +52,7 @@ export function parseMaterials(wikitext: string): { name: string; quantity: numb
   const seen = new Set<string>()
 
   // Pattern 1: Table rows — `|QTY||{{ItemIconLink|NAME}}` or `|QTY\n|{{ItemIconLink|NAME}}`
-  const tablePattern = /\|(\d+)\s*\|+\s*\{\{ItemIconLink\|([^}]+)\}\}/g
+  const tablePattern = /\|(\d+)\s*\|+\s*\{\{ItemIconLink\|([^|}]+)/g
   let match
   while ((match = tablePattern.exec(wikitext)) !== null) {
     const name = match[2].trim()
@@ -64,7 +64,7 @@ export function parseMaterials(wikitext: string): { name: string; quantity: numb
   }
 
   // Pattern 2: Table rows split across lines — `|QTY\n|{{ItemIconLink|NAME}}`
-  const splitTablePattern = /\|(\d+)\s*\n\s*\|\s*\{\{ItemIconLink\|([^}]+)\}\}/g
+  const splitTablePattern = /\|(\d+)\s*\n\s*\|\s*\{\{ItemIconLink\|([^|}]+)/g
   while ((match = splitTablePattern.exec(wikitext)) !== null) {
     const name = match[2].trim()
     const qty = parseQuantity(match[1])
@@ -75,7 +75,7 @@ export function parseMaterials(wikitext: string): { name: string; quantity: numb
   }
 
   // Pattern 3: List items — `*QTY {{ItemIconLink|NAME}}`
-  const listPattern = /^\*\s*(\d+)\s*\{\{ItemIconLink\|([^}]+)\}\}/gm
+  const listPattern = /^\*\s*(\d+)\s*\{\{ItemIconLink\|([^|}]+)/gm
   while ((match = listPattern.exec(wikitext)) !== null) {
     const name = match[2].trim()
     const qty = parseQuantity(match[1])

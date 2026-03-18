@@ -33,6 +33,7 @@ const isBaseResource = computed(() => {
 function open(item: Item, quantity: number) {
   navStack.value = [{ item, quantity }]
   isOpen.value = true
+  document.body.style.overflow = 'hidden'
 }
 
 function pushMaterial(mat: ComputedMaterial) {
@@ -50,6 +51,39 @@ function goBack() {
 function close() {
   isOpen.value = false
   navStack.value = []
+  document.body.style.overflow = ''
+}
+
+// Touch swipe to dismiss
+const drawerRef = ref<HTMLElement | null>(null)
+const dragOffset = ref(0)
+const isDragging = ref(false)
+let startY = 0
+
+function onTouchStart(e: TouchEvent) {
+  startY = e.touches[0].clientY
+  isDragging.value = true
+  dragOffset.value = 0
+}
+
+function onTouchMove(e: TouchEvent) {
+  if (!isDragging.value) return
+  const dy = e.touches[0].clientY - startY
+  // Only allow dragging down
+  dragOffset.value = Math.max(0, dy)
+  if (dragOffset.value > 0) {
+    e.preventDefault()
+  }
+}
+
+function onTouchEnd() {
+  if (!isDragging.value) return
+  isDragging.value = false
+  // Close if dragged more than 100px down
+  if (dragOffset.value > 100) {
+    close()
+  }
+  dragOffset.value = 0
 }
 
 defineExpose({ open })
@@ -70,17 +104,25 @@ defineExpose({ open })
     <Transition name="slide-up">
       <div
         v-if="isOpen && current"
+        ref="drawerRef"
         class="fixed bottom-0 left-0 right-0 z-50 mx-auto max-w-[480px]"
+        :style="{ transform: dragOffset > 0 ? `translateY(${dragOffset}px)` : undefined }"
       >
         <div class="bg-bg-card rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)] text-text-primary">
-          <!-- Handle -->
-          <div class="flex justify-center pt-3 pb-2">
-            <div class="w-10 h-1 bg-border rounded-full" />
-          </div>
+          <!-- Header (swipe area) -->
+          <div
+            class="cursor-grab touch-none"
+            @touchstart="onTouchStart"
+            @touchmove.passive="onTouchMove"
+            @touchend="onTouchEnd"
+          >
+            <!-- Handle -->
+            <div class="flex justify-center pt-3 pb-2">
+              <div class="w-10 h-1 bg-border rounded-full" />
+            </div>
 
-          <div class="px-4 pb-6 max-h-[70vh] overflow-y-auto">
-            <!-- Header with back button -->
-            <div class="flex items-center gap-2 mb-3">
+            <!-- Item info + back button -->
+            <div class="flex items-center gap-2 px-4 pb-3">
               <button
                 v-if="canGoBack"
                 class="text-accent text-sm"
@@ -105,6 +147,9 @@ defineExpose({ open })
                 </div>
               </div>
             </div>
+          </div>
+
+          <div class="px-4 pb-6 max-h-[70vh] overflow-y-auto">
 
             <!-- Quantity -->
             <div class="bg-bg-primary rounded-lg p-3 mb-3 flex items-center justify-between">
@@ -127,6 +172,7 @@ defineExpose({ open })
                     :key="mat.item?.id ?? 'unknown'"
                     :item="mat.item"
                     :quantity="mat.computedQuantity"
+                    :base-quantity="mat.baseQuantity"
                     @click="pushMaterial(mat)"
                   />
                 </div>
@@ -139,6 +185,7 @@ defineExpose({ open })
                   v-for="station in craftingStations"
                   :key="station?.id"
                   :station="station"
+                  :all-items="allItems"
                   class="!bg-bg-primary"
                 />
               </div>

@@ -60,10 +60,15 @@ export async function scrapeCategory(
       // Extract materials from Crafting/Refining section
       const craftingSection = extractCraftingSection(wikitext)
       const rawMaterials = parseMaterials(craftingSection)
-      const materials = rawMaterials.map(m => ({
-        itemId: slugify(m.name),
-        quantity: m.quantity,
-      }))
+      const materials = rawMaterials
+        .filter(m => {
+          const matId = slugify(m.name)
+          return matId !== id && matId !== 'pagename' // exclude self-references and unresolved templates
+        })
+        .map(m => ({
+          itemId: slugify(m.name),
+          quantity: m.quantity,
+        }))
 
       // Extract icon
       const imageField = extractTemplateField(wikitext, 'image1')

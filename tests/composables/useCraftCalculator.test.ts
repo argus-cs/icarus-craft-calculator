@@ -26,13 +26,15 @@ describe('calculateMaterials', () => {
   it('returns materials with computed quantities for qty=1', () => {
     const result = calculateMaterials(mockItems[0], 1, mockItems)
     expect(result).toHaveLength(2)
-    expect(result[0]).toEqual({ item: mockItems[1], computedQuantity: 6 })
-    expect(result[1]).toEqual({ item: mockItems[2], computedQuantity: 4 })
+    expect(result[0]).toEqual({ item: mockItems[1], baseQuantity: 6, computedQuantity: 6 })
+    expect(result[1]).toEqual({ item: mockItems[2], baseQuantity: 4, computedQuantity: 4 })
   })
 
   it('multiplies quantities by desired amount', () => {
     const result = calculateMaterials(mockItems[0], 3, mockItems)
+    expect(result[0].baseQuantity).toBe(6)
     expect(result[0].computedQuantity).toBe(18)
+    expect(result[1].baseQuantity).toBe(4)
     expect(result[1].computedQuantity).toBe(12)
   })
 

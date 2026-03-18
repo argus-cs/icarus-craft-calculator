@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import type { Station } from '~/types'
+import type { Station, Item } from '~/types'
 
 defineProps<{
   station: Station | undefined
+  allItems?: Item[]
 }>()
+
+function getStationIcon(stationId: string, items?: Item[]): string {
+  if (!items) return ''
+  const item = items.find(i => i.id === stationId)
+  return item?.icon ?? ''
+}
 </script>
 
 <template>
@@ -11,7 +18,17 @@ defineProps<{
     v-if="station"
     class="bg-bg-card rounded-lg p-3 flex items-center gap-2 border border-border"
   >
-    <span class="text-sm">⚙</span>
+    <div class="w-6 h-6 bg-bg-input rounded flex items-center justify-center shrink-0">
+      <img
+        v-if="getStationIcon(station.id, allItems)"
+        :src="getStationIcon(station.id, allItems)"
+        :alt="station.name"
+        class="w-full h-full object-contain rounded"
+        referrerpolicy="no-referrer"
+        @error="($event.target as HTMLImageElement).style.display='none'"
+      />
+      <span v-else class="text-xs">⚙</span>
+    </div>
     <span class="text-sm">{{ station.name }}</span>
     <span
       v-if="station.tier"

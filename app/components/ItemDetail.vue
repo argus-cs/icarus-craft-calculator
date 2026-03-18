@@ -76,6 +76,7 @@ function handleMaterialClick(mat: ComputedMaterial) {
             :key="mat.item?.id ?? 'unknown'"
             :item="mat.item"
             :quantity="mat.computedQuantity"
+            :base-quantity="mat.baseQuantity"
             @click="handleMaterialClick(mat)"
           />
         </div>
@@ -88,6 +89,7 @@ function handleMaterialClick(mat: ComputedMaterial) {
           v-for="station in craftingStations"
           :key="station?.id"
           :station="station"
+          :all-items="allItems"
         />
       </div>
     </template>

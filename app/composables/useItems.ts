@@ -1,3 +1,4 @@
+import { ref, computed } from 'vue'
 import type { Item, Category, ItemsData } from '~/types'
 
 // Pure functions (exported for testing)

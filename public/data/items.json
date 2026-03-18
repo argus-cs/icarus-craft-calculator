@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-03-18T17:48:21.400Z",
+  "generatedAt": "2026-03-18T19:30:17.504Z",
   "items": [
     {
       "id": "advanced-deep-mining-ore-scanner",
@@ -6273,7 +6273,7 @@
           "quantity": 12
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 6
         }
       ]
@@ -6291,7 +6291,7 @@
           "quantity": 10
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 4
         }
       ]
@@ -6309,7 +6309,7 @@
           "quantity": 20
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 3
         }
       ]
@@ -6345,7 +6345,7 @@
           "quantity": 20
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 3
         }
       ]
@@ -6363,7 +6363,7 @@
           "quantity": 20
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 3
         }
       ]
@@ -6381,7 +6381,7 @@
           "quantity": 6
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 10
         }
       ]
@@ -6399,7 +6399,7 @@
           "quantity": 8
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 2
         }
       ]
@@ -6417,7 +6417,7 @@
           "quantity": 20
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 3
         }
       ]
@@ -6435,7 +6435,7 @@
           "quantity": 10
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 2
         }
       ]
@@ -6453,7 +6453,7 @@
           "quantity": 10
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 4
         }
       ]
@@ -6471,7 +6471,7 @@
           "quantity": 20
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 3
         }
       ]
@@ -6489,7 +6489,7 @@
           "quantity": 10
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 2
         }
       ]
@@ -6507,7 +6507,7 @@
           "quantity": 10
         },
         {
-          "itemId": "stick-sticks",
+          "itemId": "stick",
           "quantity": 4
         }
       ]
@@ -9582,6 +9582,10 @@
         {
           "itemId": "wild-berry",
           "quantity": 3
+        },
+        {
+          "itemId": "iron-ingot",
+          "quantity": 2
         }
       ]
     },
@@ -16724,10 +16728,6 @@
         {
           "itemId": "stone",
           "quantity": 100
-        },
-        {
-          "itemId": "stone-pile",
-          "quantity": 1
         }
       ]
     },
@@ -17688,10 +17688,6 @@
         {
           "itemId": "wood",
           "quantity": 100
-        },
-        {
-          "itemId": "wood-pile",
-          "quantity": 1
         }
       ]
     },
@@ -18036,10 +18032,6 @@
         {
           "itemId": "aluminium-ore",
           "quantity": 1
-        },
-        {
-          "itemId": "aluminium-ingot",
-          "quantity": 1
         }
       ]
     },
@@ -18298,10 +18290,6 @@
         {
           "itemId": "carbon-paste",
           "quantity": 1
-        },
-        {
-          "itemId": "pagename",
-          "quantity": 1
         }
       ]
     },
@@ -18552,10 +18540,6 @@
         {
           "itemId": "copper-ore",
           "quantity": 2
-        },
-        {
-          "itemId": "copper-ingot",
-          "quantity": 1
         }
       ]
     },
@@ -19188,10 +19172,6 @@
         {
           "itemId": "iron-ore",
           "quantity": 2
-        },
-        {
-          "itemId": "iron-ingot",
-          "quantity": 1
         }
       ]
     },
@@ -19450,10 +19430,6 @@
         {
           "itemId": "platinum-ore",
           "quantity": 5
-        },
-        {
-          "itemId": "platinum-ingot",
-          "quantity": 1
         }
       ]
     },
@@ -19700,10 +19676,6 @@
         {
           "itemId": "gold-ore",
           "quantity": 2
-        },
-        {
-          "itemId": "refined-gold",
-          "quantity": 1
         }
       ]
     },
@@ -19836,10 +19808,6 @@
         {
           "itemId": "scoria",
           "quantity": 1
-        },
-        {
-          "itemId": "pagename",
-          "quantity": 5
         }
       ]
     },
@@ -19894,10 +19862,6 @@
         {
           "itemId": "obsidian",
           "quantity": 2
-        },
-        {
-          "itemId": "shaped-obsidian",
-          "quantity": 1
         }
       ]
     },
@@ -20067,10 +20031,6 @@
         {
           "itemId": "steel-bloom",
           "quantity": 1
-        },
-        {
-          "itemId": "steel-ingot",
-          "quantity": 1
         }
       ]
     },
@@ -20087,10 +20047,6 @@
         {
           "itemId": "steel-ingot",
           "quantity": 1
-        },
-        {
-          "itemId": "steel-rebar",
-          "quantity": 10
         }
       ]
     },
@@ -20107,10 +20063,6 @@
         {
           "itemId": "steel-ingot",
           "quantity": 1
-        },
-        {
-          "itemId": "steel-screw",
-          "quantity": 100
         }
       ]
     },
@@ -20128,10 +20080,6 @@
         {
           "itemId": "wood",
           "quantity": 1
-        },
-        {
-          "itemId": "stick",
-          "quantity": 10
         }
       ]
     },
@@ -20158,10 +20106,6 @@
         {
           "itemId": "stone",
           "quantity": 3
-        },
-        {
-          "itemId": "stone-brick",
-          "quantity": 1
         }
       ]
     },
@@ -20275,10 +20219,6 @@
         {
           "itemId": "titanium-ore",
           "quantity": 5
-        },
-        {
-          "itemId": "titanium-ingot",
-          "quantity": 1
         }
       ]
     },
@@ -20530,6 +20470,409 @@
       "category": "resources",
       "tier": "tier-2",
       "icon": "https://static.wikia.nocookie.net/icarus/images/c/cd/ITEM_Zebra_Vestige.png/revision/latest/scale-to-width-down/50?cb=20240212065259",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "anti-parasitic-paste",
+      "name": "Anti-Parasitic Paste",
+      "category": "resources",
+      "tier": "tier-1",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/5/51/ITEM_Anti-Parasitic_Paste.png/revision/latest/scale-to-width-down/50?cb=20211101183437",
+      "craftedAt": [
+        "character-crafting"
+      ],
+      "materials": [
+        {
+          "itemId": "reed-flower",
+          "quantity": 1
+        },
+        {
+          "itemId": "sulfur",
+          "quantity": 1
+        },
+        {
+          "itemId": "charcoal",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "anti-poison-paste",
+      "name": "Anti-Poison Paste",
+      "category": "resources",
+      "tier": "tier-1",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/b/b5/ITEM_Anti-Poison_Paste.png/revision/latest/scale-to-width-down/50?cb=20211101183438",
+      "craftedAt": [
+        "character-crafting"
+      ],
+      "materials": [
+        {
+          "itemId": "fiber",
+          "quantity": 1
+        },
+        {
+          "itemId": "spoiled-meat",
+          "quantity": 2
+        },
+        {
+          "itemId": "charcoal",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "antibiotic-paste",
+      "name": "Antibiotic Paste",
+      "category": "resources",
+      "tier": "tier-1",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/7/79/ITEM_Antibiotic_Paste.png/revision/latest/scale-to-width-down/50?cb=20211101183438",
+      "craftedAt": [
+        "character-crafting"
+      ],
+      "materials": [
+        {
+          "itemId": "yeast",
+          "quantity": 1
+        },
+        {
+          "itemId": "silica-ore",
+          "quantity": 1
+        },
+        {
+          "itemId": "charcoal",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "blood-thinning-paste",
+      "name": "Blood Thinning Paste",
+      "category": "resources",
+      "tier": "tier-1",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/1/18/ITEM_Blood_Thinning_Paste.png/revision/latest/scale-to-width-down/50?cb=20211101183439",
+      "craftedAt": [
+        "character-crafting"
+      ],
+      "materials": [
+        {
+          "itemId": "lily",
+          "quantity": 1
+        },
+        {
+          "itemId": "stick",
+          "quantity": 10
+        },
+        {
+          "itemId": "charcoal",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "composites",
+      "name": "Composites",
+      "category": "resources",
+      "tier": "tier-4",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/6/6e/ITEM_Composites.png/revision/latest/scale-to-width-down/50?cb=20210916205448",
+      "craftedAt": [
+        "electric-furnace"
+      ],
+      "materials": [
+        {
+          "itemId": "composite-paste",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "copper-nail",
+      "name": "Copper Nail",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/6/6b/ITEM_Copper_Nail.png/revision/latest/scale-to-width-down/50?cb=20211110183801",
+      "craftedAt": [
+        "anvil-bench"
+      ],
+      "materials": [
+        {
+          "itemId": "copper-ingot",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "glass-bottle",
+      "name": "Glass Bottle",
+      "category": "resources",
+      "tier": "tier-3",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/c/c8/ITEM_Glass_Bottle.png/revision/latest/scale-to-width-down/50?cb=20240402212724",
+      "craftedAt": [
+        "glassworking-bench"
+      ],
+      "materials": [
+        {
+          "itemId": "glass",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "glass-jar",
+      "name": "Glass Jar",
+      "category": "resources",
+      "tier": "tier-3",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/0/03/ITEM_Glass_Jar.png/revision/latest/scale-to-width-down/50?cb=20211101180949",
+      "craftedAt": [
+        "glassworking-bench"
+      ],
+      "materials": [
+        {
+          "itemId": "glass",
+          "quantity": 1
+        },
+        {
+          "itemId": "iron-ingot",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "glass-milk-bottle",
+      "name": "Glass Milk Bottle",
+      "category": "resources",
+      "tier": "tier-3",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/f/f4/ITEM_Glass_Milk_Bottle.png/revision/latest/scale-to-width-down/50?cb=20250130002637",
+      "craftedAt": [
+        "glassworking-bench"
+      ],
+      "materials": [
+        {
+          "itemId": "glass",
+          "quantity": 7
+        }
+      ]
+    },
+    {
+      "id": "iron-nail",
+      "name": "Iron Nail",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/0/06/ITEM_Iron_Nail.png/revision/latest/scale-to-width-down/50?cb=20211110183818",
+      "craftedAt": [
+        "anvil-bench"
+      ],
+      "materials": [
+        {
+          "itemId": "iron-ingot",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "legendary-biomass",
+      "name": "Legendary Biomass",
+      "category": "resources",
+      "tier": "tier-3",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/6/6b/ITEM_Legendary_Biomass.png/revision/latest/scale-to-width-down/50?cb=20250717205842",
+      "craftedAt": [
+        "organic-residue-cleanser",
+        "biofuel-bio-cleaner"
+      ],
+      "materials": []
+    },
+    {
+      "id": "milk-pail",
+      "name": "Milk Pail",
+      "category": "resources",
+      "tier": "tier-2",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/7/79/ITEM_Milk_Pail.png/revision/latest/scale-to-width-down/50?cb=20250130002659",
+      "craftedAt": [
+        "anvil-bench",
+        "forge",
+        "foundry"
+      ],
+      "materials": [
+        {
+          "itemId": "steel-ingot",
+          "quantity": 10
+        },
+        {
+          "itemId": "steel-screw",
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "id": "packed-fuel-brick",
+      "name": "Packed Fuel Brick",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/7/7e/ITEM_Packed_Fuel_Brick.png/revision/latest/scale-to-width-down/50?cb=20251108004214",
+      "craftedAt": [
+        "crafting-bench",
+        "machining-bench",
+        "fabricator"
+      ],
+      "materials": [
+        {
+          "itemId": "tree-sap",
+          "quantity": 1
+        },
+        {
+          "itemId": "fur",
+          "quantity": 20
+        }
+      ]
+    },
+    {
+      "id": "refined-wood",
+      "name": "Refined Wood",
+      "category": "resources",
+      "tier": "tier-2",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/1/14/ITEM_Refined_Wood.png/revision/latest/scale-to-width-down/50?cb=20210916210129",
+      "craftedAt": [
+        "carpentry-bench"
+      ],
+      "materials": [
+        {
+          "itemId": "wood",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "sugar-cubes",
+      "name": "Sugar Cubes",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/e/e3/ITEM_Sugar_Cubes.png/revision/latest/scale-to-width-down/50?cb=20250110223752",
+      "craftedAt": [
+        "material-processor",
+        "mortar-and-pestle"
+      ],
+      "materials": [
+        {
+          "itemId": "sugar-cane",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": "tree-sap",
+      "name": "Tree Sap",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/5/50/ITEM_Tree_Sap.png/revision/latest/scale-to-width-down/50?cb=20230901215231",
+      "craftedAt": [
+        "mortar-and-pestle",
+        "material-processor"
+      ],
+      "materials": [
+        {
+          "itemId": "stick",
+          "quantity": 4
+        },
+        {
+          "itemId": "wood",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "vegetable-oil",
+      "name": "Vegetable Oil",
+      "category": "resources",
+      "tier": "tier-2",
+      "icon": "https://static.wikia.nocookie.net/icarus/images/1/1c/ITEM_Vegetable_Oil.png/revision/latest/scale-to-width-down/50?cb=20230813202827",
+      "craftedAt": [
+        "mortar-and-pestle",
+        "material-processor"
+      ],
+      "materials": [
+        {
+          "itemId": "seeds",
+          "quantity": 15
+        },
+        {
+          "itemId": "soy-bean",
+          "quantity": 25
+        },
+        {
+          "itemId": "avocado",
+          "quantity": 15
+        }
+      ]
+    },
+    {
+      "id": "black-wolf-tooth",
+      "name": "Black Wolf Tooth",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/2/2b/ITEM_Black_Wolf_Tooth.png/revision/latest/scale-to-width-down/50?cb=20230301005106",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "egg",
+      "name": "Egg",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/3/31/ITEM_Egg.png/revision/latest/scale-to-width-down/50?cb=20240603192453",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "hardened-magma",
+      "name": "Hardened Magma",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/1/10/ITEM_Hardened_Magma.png/revision/latest/scale-to-width-down/50?cb=20250717212248",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/2/24/ICON_Milk.png/revision/latest/scale-to-width-down/50?cb=20241229234057",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "poison-sack",
+      "name": "Poison Sack",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/f/f1/ITEM_Poison_Sack.png/revision/latest/scale-to-width-down/50?cb=20220325090242",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "scorpion-pincer",
+      "name": "Scorpion Pincer",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/d/d6/ITEM_Scorpion_Pincer.png/revision/latest/scale-to-width-down/50?cb=20220414075219",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "scorpion-tail",
+      "name": "Scorpion Tail",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/7/71/ITEM_Scorpion_Tail.png/revision/latest/scale-to-width-down/50?cb=20220414075219",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "worm-scale",
+      "name": "Worm Scale",
+      "category": "resources",
+      "tier": null,
+      "icon": "https://static.wikia.nocookie.net/icarus/images/e/e2/ITEM_Worm_Scale.png/revision/latest/scale-to-width-down/50?cb=20220325214038",
       "craftedAt": [],
       "materials": []
     }
@@ -20960,6 +21303,12 @@
       "name": "Refrigerator",
       "category": "deployables",
       "tier": "tier-1"
+    },
+    {
+      "id": "glassworking-bench",
+      "name": "Glassworking Bench",
+      "category": "deployables",
+      "tier": "tier-3"
     }
   ]
 }
