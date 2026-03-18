@@ -1,0 +1,63 @@
+<h2>Abordagens de Arquitetura</h2>
+<p class="subtitle">Como estruturar o Icarus Crafting Calculator</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Monolito Simples</h3>
+      <p><strong>Scraper + App tudo junto no mesmo repo Nuxt</strong></p>
+      <ul style="text-align:left; margin-top:8px; font-size:14px;">
+        <li>Script de scraping como <code>scripts/scrape.ts</code> que gera JSON em <code>public/data/</code></li>
+        <li>App Nuxt lê os JSONs como assets estáticos</li>
+        <li>Uma única página com lista + busca, detalhes inline e modal de materiais</li>
+        <li>SSG gera site estático no build</li>
+      </ul>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>✓ Prós</h4><ul><li>Simples de manter</li><li>Um repo só</li><li>Deploy direto</li></ul></div>
+        <div class="cons"><h4>✗ Contras</h4><ul><li>Scraper misturado com app</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Separação Scraper / App</h3>
+      <p><strong>Dois pacotes: scraper independente + app Nuxt</strong></p>
+      <ul style="text-align:left; margin-top:8px; font-size:14px;">
+        <li>Monorepo com <code>packages/scraper</code> e <code>packages/app</code></li>
+        <li>Scraper gera JSON, app consome</li>
+        <li>Scraper pode rodar via CI/CD para atualizar dados</li>
+        <li>App Nuxt permanece leve e focado na UI</li>
+      </ul>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>✓ Prós</h4><ul><li>Separação de responsabilidades</li><li>Scraper reutilizável</li><li>CI pode automatizar updates</li></ul></div>
+        <div class="cons"><h4>✗ Contras</h4><ul><li>Mais setup inicial</li><li>Complexidade de monorepo</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Monolito com Scraper como Módulo Nuxt</h3>
+      <p><strong>App Nuxt + scraper como server route / módulo interno</strong></p>
+      <ul style="text-align:left; margin-top:8px; font-size:14px;">
+        <li>Scraper como <code>server/scripts/scrape.ts</code> ou módulo Nuxt</li>
+        <li>Pode expor endpoint <code>/api/scrape</code> em dev para atualizar</li>
+        <li>Dados gerados em <code>public/data/</code></li>
+        <li>Em produção funciona como site estático normal</li>
+      </ul>
+      <div class="pros-cons" style="margin-top:12px;">
+        <div class="pros"><h4>✓ Prós</h4><ul><li>Integrado mas organizado</li><li>Fácil de rodar scraper</li></ul></div>
+        <div class="cons"><h4>✗ Contras</h4><ul><li>Acoplamento desnecessário</li><li>Complexidade sem ganho real</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="margin-top: 24px; padding: 16px; background: rgba(251, 191, 36, 0.1); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 8px;">
+  <h3 style="color: #fbbf24; margin-bottom: 8px;">⭐ Recomendação: Opção A</h3>
+  <p style="font-size: 14px;">Para o escopo deste projeto (3 categorias de itens, sem backend, dados estáticos), a simplicidade do monolito é a melhor escolha. O scraper é um script utilitário que roda raramente — não justifica a complexidade de um monorepo. Um <code>scripts/</code> no mesmo repo resolve perfeitamente.</p>
+</div>

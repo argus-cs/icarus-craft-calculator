@@ -1,0 +1,57 @@
+<h2>Fluxo do App & Componentes</h2>
+<p class="subtitle">Navegação e hierarquia de componentes Vue</p>
+
+<!-- Flow diagram -->
+<div class="mockup" style="margin-bottom: 24px;">
+  <div class="mockup-header">Fluxo de Navegação</div>
+  <div class="mockup-body" style="text-align: center; padding: 24px;">
+    <div style="display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;">
+      <div style="background: #1e293b; border: 2px solid #fbbf24; border-radius: 8px; padding: 12px 16px; font-weight: bold;">
+        📋 Lista de Itens<br><small style="color: #94a3b8;">busca + filtro por categoria</small>
+      </div>
+      <div style="font-size: 24px; color: #fbbf24;">→</div>
+      <div style="background: #1e293b; border: 2px solid #3b82f6; border-radius: 8px; padding: 12px 16px; font-weight: bold;">
+        📄 Detalhe do Item<br><small style="color: #94a3b8;">materiais + estações + qty</small>
+      </div>
+      <div style="font-size: 24px; color: #fbbf24;">→</div>
+      <div style="background: #1e293b; border: 2px solid #a855f7; border-radius: 8px; padding: 12px 16px; font-weight: bold;">
+        🔍 Modal Material<br><small style="color: #94a3b8;">sub-materiais + qty + estação</small>
+      </div>
+    </div>
+    <div style="margin-top: 16px; color: #64748b; font-size: 13px;">
+      Modal pode abrir outro modal (recursivo) — ex: Steel Ingot → Iron Ore + Carbon
+    </div>
+  </div>
+</div>
+
+<!-- Component tree -->
+<div class="mockup" style="margin-bottom: 24px;">
+  <div class="mockup-header">Árvore de Componentes Vue</div>
+  <div class="mockup-body" style="padding: 20px; font-family: monospace; font-size: 13px; line-height: 2;">
+    <div style="color: #fbbf24;">app.vue</div>
+    <div style="margin-left: 20px; color: #3b82f6;">pages/index.vue <span style="color: #64748b;">— página principal</span></div>
+    <div style="margin-left: 40px; color: #22c55e;">SearchBar.vue <span style="color: #64748b;">— input de busca</span></div>
+    <div style="margin-left: 40px; color: #22c55e;">CategoryFilter.vue <span style="color: #64748b;">— tabs: Ferramentas | Construções | Deployables</span></div>
+    <div style="margin-left: 40px; color: #22c55e;">ItemList.vue <span style="color: #64748b;">— lista filtrada de itens</span></div>
+    <div style="margin-left: 60px; color: #f97316;">ItemCard.vue <span style="color: #64748b;">— card de cada item na lista</span></div>
+    <div style="margin-left: 40px; color: #22c55e;">ItemDetail.vue <span style="color: #64748b;">— painel de detalhes (slide-up ou nova seção)</span></div>
+    <div style="margin-left: 60px; color: #f97316;">QuantityInput.vue <span style="color: #64748b;">— campo +/- quantidade</span></div>
+    <div style="margin-left: 60px; color: #f97316;">MaterialRow.vue <span style="color: #64748b;">— linha de material (clicável)</span></div>
+    <div style="margin-left: 60px; color: #f97316;">StationBadge.vue <span style="color: #64748b;">— badge da estação de craft</span></div>
+    <div style="margin-left: 40px; color: #a855f7;">MaterialModal.vue <span style="color: #64748b;">— modal de detalhe do material</span></div>
+    <div style="margin-left: 60px; color: #f97316;">QuantityInput.vue <span style="color: #64748b;">— reutilizado</span></div>
+    <div style="margin-left: 60px; color: #f97316;">MaterialRow.vue <span style="color: #64748b;">— reutilizado (permite recursão)</span></div>
+    <div style="margin-left: 60px; color: #f97316;">StationBadge.vue <span style="color: #64748b;">— reutilizado</span></div>
+  </div>
+</div>
+
+<!-- Composables -->
+<div class="mockup">
+  <div class="mockup-header">Composables (lógica reutilizável)</div>
+  <div class="mockup-body" style="padding: 20px; font-family: monospace; font-size: 13px; line-height: 2;">
+    <div style="color: #fbbf24;">composables/</div>
+    <div style="margin-left: 20px; color: #3b82f6;">useItems.ts <span style="color: #64748b;">— carrega items.json, busca, filtro por categoria</span></div>
+    <div style="margin-left: 20px; color: #3b82f6;">useCraftCalculator.ts <span style="color: #64748b;">— cálculo de materiais × quantidade</span></div>
+    <div style="margin-left: 20px; color: #3b82f6;">useStations.ts <span style="color: #64748b;">— lookup de estações por ID</span></div>
+  </div>
+</div>
