@@ -69,7 +69,6 @@ function onTouchStart(e: TouchEvent) {
 function onTouchMove(e: TouchEvent) {
   if (!isDragging.value) return
   const dy = e.touches[0].clientY - startY
-  // Only allow dragging down
   dragOffset.value = Math.max(0, dy)
   if (dragOffset.value > 0) {
     e.preventDefault()
@@ -79,7 +78,6 @@ function onTouchMove(e: TouchEvent) {
 function onTouchEnd() {
   if (!isDragging.value) return
   isDragging.value = false
-  // Close if dragged more than 100px down
   if (dragOffset.value > 100) {
     close()
   }
@@ -95,7 +93,7 @@ defineExpose({ open })
     <Transition name="fade">
       <div
         v-if="isOpen"
-        class="fixed inset-0 bg-black/40 z-40"
+        class="fixed inset-0 bg-black/50 z-40"
         @click="close"
       />
     </Transition>
@@ -108,7 +106,7 @@ defineExpose({ open })
         class="fixed bottom-0 left-0 right-0 z-50 mx-auto max-w-[480px]"
         :style="{ transform: dragOffset > 0 ? `translateY(${dragOffset}px)` : undefined }"
       >
-        <div class="bg-bg-card rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)] text-text-primary">
+        <div class="bg-bg-primary text-text-primary border-t-2 border-border-active shadow-[0_-4px_20px_rgba(0,0,0,0.6)]">
           <!-- Header (swipe area) -->
           <div
             class="cursor-grab touch-none"
@@ -118,55 +116,64 @@ defineExpose({ open })
           >
             <!-- Handle -->
             <div class="flex justify-center pt-3 pb-2">
-              <div class="w-10 h-1 bg-border rounded-full" />
+              <div class="w-9 h-[3px] bg-border-active" />
             </div>
 
-            <!-- Item info + back button -->
-            <div class="flex items-center gap-2 px-4 pb-3">
+            <!-- Item info + back button with corner brackets -->
+            <div class="flex items-center gap-2.5 px-3 pb-3">
               <button
                 v-if="canGoBack"
                 class="text-accent text-sm"
                 @click="goBack"
               >
-                ←
+                &#8592;
               </button>
-              <div class="flex items-center gap-2">
-                <div class="w-9 h-9 bg-bg-input rounded-lg flex items-center justify-center shrink-0">
+              <div class="relative flex-1 bg-bg-card border border-border p-2.5 flex items-center gap-2.5">
+                <!-- Corner brackets -->
+                <div class="absolute -top-px -left-px w-[7px] h-[7px] border-t-2 border-l-2 border-border-active"></div>
+                <div class="absolute -top-px -right-px w-[7px] h-[7px] border-t-2 border-r-2 border-border-active"></div>
+                <div class="absolute -bottom-px -left-px w-[7px] h-[7px] border-b-2 border-l-2 border-border-active"></div>
+                <div class="absolute -bottom-px -right-px w-[7px] h-[7px] border-b-2 border-r-2 border-border-active"></div>
+
+                <div class="w-9 h-9 bg-bg-input border border-border flex items-center justify-center shrink-0">
                   <img
                     v-if="current.item.icon"
                     :src="current.item.icon"
                     :alt="current.item.name"
-                    class="w-full h-full object-contain rounded-lg"
+                    class="w-full h-full object-contain"
                     referrerpolicy="no-referrer"
                     @error="($event.target as HTMLImageElement).style.display='none'"
                   />
                 </div>
-                <div>
-                  <div class="font-bold text-[15px] text-text-primary">{{ current.item.name }}</div>
-                  <div class="text-[11px] text-text-muted">{{ current.item.category }} • {{ current.item.tier ?? 'Base' }}</div>
+                <div class="flex-1 min-w-0">
+                  <div class="font-bold text-[14px] text-text-primary truncate">{{ current.item.name }}</div>
+                  <div class="text-[10px] text-text-muted uppercase tracking-[1px]">{{ current.item.category }} &bull; {{ current.item.tier ?? 'BASE' }}</div>
                 </div>
+                <div class="text-accent font-bold text-base shrink-0">&times;{{ current.quantity }}</div>
               </div>
             </div>
           </div>
 
-          <div class="px-4 pb-6 max-h-[70vh] overflow-y-auto">
+          <div class="px-3 pb-5 max-h-[70vh] overflow-y-auto">
 
-            <!-- Quantity -->
-            <div class="bg-bg-primary rounded-lg p-3 mb-3 flex items-center justify-between">
-              <span class="text-xs text-text-secondary">Quantidade</span>
+            <!-- Quantity display -->
+            <div class="bg-bg-card border border-border p-3 mb-3 flex items-center justify-between">
+              <span class="text-[10px] text-text-secondary uppercase tracking-[1.5px]">QUANTITY</span>
               <span class="text-lg font-bold text-accent">{{ current.quantity }}</span>
             </div>
 
             <!-- Base resource message -->
-            <div v-if="isBaseResource" class="bg-bg-primary rounded-lg p-4 text-center">
-              <p class="text-sm text-text-secondary">Base resource — gathered in the world</p>
+            <div v-if="isBaseResource" class="bg-bg-card border border-border p-4 text-center">
+              <p class="text-sm text-text-secondary">Base resource &mdash; gathered in the world</p>
             </div>
 
             <!-- Materials -->
             <template v-else>
               <div v-if="materials.length > 0" class="mb-3">
-                <p class="text-[11px] text-text-secondary uppercase tracking-wider mb-1.5">Materiais necessários</p>
-                <div class="bg-bg-primary rounded-lg overflow-hidden divide-y divide-bg-card">
+                <div class="mb-1.5 py-1 px-2.5" style="background: linear-gradient(90deg, rgba(140,135,60,0.3) 0%, rgba(140,135,60,0.05) 100%);">
+                  <span class="text-[9px] text-accent uppercase tracking-[1.5px] font-semibold">REQUIRED ELEMENTS</span>
+                </div>
+                <div class="bg-bg-card border border-border overflow-hidden divide-y divide-[rgba(140,135,60,0.1)]">
                   <MaterialRow
                     v-for="mat in materials"
                     :key="mat.item?.id ?? 'unknown'"
@@ -180,13 +187,14 @@ defineExpose({ open })
 
               <!-- Station -->
               <div v-if="craftingStations.length > 0">
-                <p class="text-[11px] text-text-secondary uppercase tracking-wider mb-1.5">Estação de craft</p>
+                <div class="mb-1.5 py-1 px-2.5" style="background: linear-gradient(90deg, rgba(140,135,60,0.3) 0%, rgba(140,135,60,0.05) 100%);">
+                  <span class="text-[9px] text-accent uppercase tracking-[1.5px] font-semibold">CRAFTING STATION</span>
+                </div>
                 <StationBadge
                   v-for="station in craftingStations"
                   :key="station?.id"
                   :station="station"
                   :all-items="allItems"
-                  class="!bg-bg-primary"
                 />
               </div>
             </template>

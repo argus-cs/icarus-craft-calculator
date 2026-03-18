@@ -11,21 +11,21 @@ function increment() {
 </script>
 
 <template>
-  <div class="flex items-center gap-3">
+  <div class="flex items-center">
     <button
-      class="w-8 h-8 rounded-md bg-bg-input border border-border text-text-primary flex items-center justify-center hover:border-accent transition-colors"
+      class="w-[30px] h-[28px] bg-[rgba(140,135,60,0.1)] border border-border-active text-accent flex items-center justify-center hover:bg-[rgba(140,135,60,0.2)] transition-colors font-bold text-sm"
       @click="decrement"
     >
-      −
+      &lsaquo;
     </button>
-    <span class="text-xl font-bold text-accent min-w-[24px] text-center">
+    <span class="w-[44px] h-[28px] bg-[rgba(0,0,0,0.5)] border-y border-border-active text-accent font-bold text-base flex items-center justify-center">
       {{ model }}
     </span>
     <button
-      class="w-8 h-8 rounded-md bg-bg-input border border-border text-text-primary flex items-center justify-center hover:border-accent transition-colors"
+      class="w-[30px] h-[28px] bg-[rgba(140,135,60,0.1)] border border-border-active text-accent flex items-center justify-center hover:bg-[rgba(140,135,60,0.2)] transition-colors font-bold text-sm"
       @click="increment"
     >
-      +
+      &rsaquo;
     </button>
   </div>
 </template>

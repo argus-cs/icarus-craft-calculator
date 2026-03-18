@@ -17,12 +17,12 @@ function openMaterial(materialItem: import('~/types').Item, quantity: number) {
 <template>
   <div>
     <!-- Header -->
-    <div class="bg-bg-card p-3 border-b border-border flex items-center gap-3">
-      <NuxtLink to="/" class="text-accent text-base">←</NuxtLink>
-      <span class="text-sm font-bold">{{ item?.name ?? 'Not found' }}</span>
+    <div class="px-3 py-4 border-b border-border-active flex items-center gap-3" style="background: linear-gradient(180deg, rgba(140,135,60,0.35) 0%, rgba(140,135,60,0.15) 100%);">
+      <NuxtLink to="/" class="w-10 h-10 flex items-center justify-center text-accent text-lg">&#8592;</NuxtLink>
+      <span class="text-xs font-bold uppercase tracking-[1.5px]">{{ item?.name ?? 'Not found' }}</span>
       <span
         v-if="item?.tier"
-        class="ml-auto text-[11px] text-text-muted bg-bg-input px-2 py-0.5 rounded"
+        class="ml-auto text-[9px] text-text-muted bg-bg-input border border-border px-2 py-0.5 uppercase tracking-[1px]"
       >
         {{ item.tier }}
       </span>
