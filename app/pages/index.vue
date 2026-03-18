@@ -1,6 +1,21 @@
+<script setup lang="ts">
+const { filteredItems, category, query, load } = useItems()
+
+await load()
+</script>
+
 <template>
-  <div class="p-4">
-    <h1 class="text-2xl font-bold text-accent">Icarus Craft Calculator</h1>
-    <p class="mt-2 text-text-secondary">Welcome to the Icarus Craft Calculator.</p>
+  <div>
+    <!-- Header -->
+    <div class="bg-bg-card p-4 border-b border-border">
+      <h1 class="text-sm font-bold text-accent mb-2">⚒ Icarus Craft Calculator</h1>
+      <SearchBar v-model="query" />
+    </div>
+
+    <!-- Category filter -->
+    <CategoryFilter v-model="category" />
+
+    <!-- Item list -->
+    <ItemList :items="filteredItems" />
   </div>
 </template>
