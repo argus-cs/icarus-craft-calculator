@@ -2,7 +2,7 @@
 const route = useRoute()
 const { load, findById, items, data } = useItems()
 
-await load()
+onMounted(() => load())
 
 const item = computed(() => findById(route.params.id as string))
 const stations = computed(() => data.value?.stations ?? [])

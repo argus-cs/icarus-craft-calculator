@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { filteredItems, category, query, load } = useItems()
 
-await load()
+onMounted(() => load())
 </script>
 
 <template>

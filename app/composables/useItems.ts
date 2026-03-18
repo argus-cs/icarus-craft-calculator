@@ -31,7 +31,10 @@ export function useItems() {
   })
 
   async function load() {
-    const response = await $fetch<ItemsData>('/data/items.json')
+    if (data.value) return
+    const config = useRuntimeConfig()
+    const baseURL = config.app.baseURL || '/'
+    const response = await $fetch<ItemsData>(`${baseURL}data/items.json`)
     data.value = response
   }
 
