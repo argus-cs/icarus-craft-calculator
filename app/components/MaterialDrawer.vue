@@ -72,7 +72,7 @@ defineExpose({ open })
         v-if="isOpen && current"
         class="fixed bottom-0 left-0 right-0 z-50 mx-auto max-w-[480px]"
       >
-        <div class="bg-bg-card rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)]">
+        <div class="bg-bg-card rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)] text-text-primary">
           <!-- Handle -->
           <div class="flex justify-center pt-3 pb-2">
             <div class="w-10 h-1 bg-border rounded-full" />
@@ -99,7 +99,7 @@ defineExpose({ open })
                   />
                 </div>
                 <div>
-                  <div class="font-bold text-[15px]">{{ current.item.name }}</div>
+                  <div class="font-bold text-[15px] text-text-primary">{{ current.item.name }}</div>
                   <div class="text-[11px] text-text-muted">{{ current.item.category }} • {{ current.item.tier ?? 'Base' }}</div>
                 </div>
               </div>

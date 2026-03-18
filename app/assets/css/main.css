@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+body {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+button {
+  color: inherit;
+}
+
 @theme {
   --color-bg-primary: #0f172a;
   --color-bg-card: #1e293b;
