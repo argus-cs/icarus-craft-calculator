@@ -9,24 +9,24 @@ defineProps<{
 <template>
   <NuxtLink
     :to="`/items/${item.id}`"
-    class="bg-bg-card rounded-lg p-3 flex items-center gap-3 border border-border hover:border-accent transition-colors"
+    class="bg-bg-card p-3 flex items-center gap-3 border border-border hover:border-select hover:bg-select-bg transition-colors"
   >
-    <div class="w-8 h-8 bg-bg-input rounded flex items-center justify-center text-base shrink-0">
+    <div class="w-10 h-10 bg-bg-input border border-border flex items-center justify-center shrink-0">
       <img
         v-if="item.icon"
         :src="item.icon"
         :alt="item.name"
-        class="w-full h-full object-contain rounded"
+        class="w-full h-full object-contain"
         referrerpolicy="no-referrer"
         @error="($event.target as HTMLImageElement).style.display='none'"
       />
     </div>
     <div class="min-w-0">
-      <div class="text-sm font-bold truncate">{{ item.name }}</div>
-      <div class="text-[10px] text-text-muted">
-        {{ item.tier ?? 'Base' }} • {{ item.materials.length }} materiais
+      <div class="text-sm font-semibold truncate">{{ item.name }}</div>
+      <div class="text-[10px] text-text-muted uppercase tracking-[0.8px]">
+        {{ item.tier ?? 'BASE' }} &bull; {{ item.materials.length }} MATERIALS
       </div>
     </div>
-    <span class="ml-auto text-border text-base shrink-0">›</span>
+    <span class="ml-auto text-text-muted text-base shrink-0">&rsaquo;</span>
   </NuxtLink>
 </template>

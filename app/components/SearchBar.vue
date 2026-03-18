@@ -16,7 +16,7 @@ const model = defineModel<string>({ default: '' })
       autocapitalize="off"
       spellcheck="false"
       placeholder="Buscar item..."
-      class="w-full bg-bg-primary border border-border rounded-lg py-2 pl-9 pr-3 text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-accent"
+      class="w-full bg-[rgba(0,0,0,0.5)] border border-border py-2 pl-9 pr-3 text-sm text-text-primary placeholder-text-muted focus:outline-none focus:border-border-active"
       @input="model = ($event.target as HTMLInputElement).value"
     />
   </div>

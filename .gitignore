@@ -25,3 +25,6 @@ logs
 
 # Swap files
 *.sw?
+
+# Superpowers brainstorm artifacts
+.superpowers/
