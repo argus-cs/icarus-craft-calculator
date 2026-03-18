@@ -1,0 +1,255 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-03-18T12:00:00Z",
+  "items": [
+    {
+      "id": "stone-pickaxe",
+      "name": "Stone Pickaxe",
+      "category": "tools",
+      "tier": "tier-1",
+      "icon": "/icons/stone-pickaxe.png",
+      "craftedAt": ["crafting-bench"],
+      "materials": [
+        { "itemId": "stone", "quantity": 10 },
+        { "itemId": "wood", "quantity": 4 },
+        { "itemId": "fiber", "quantity": 6 }
+      ]
+    },
+    {
+      "id": "iron-pickaxe",
+      "name": "Iron Pickaxe",
+      "category": "tools",
+      "tier": "tier-2",
+      "icon": "/icons/iron-pickaxe.png",
+      "craftedAt": ["anvil-bench"],
+      "materials": [
+        { "itemId": "iron-ingot", "quantity": 6 },
+        { "itemId": "wood", "quantity": 4 },
+        { "itemId": "leather", "quantity": 2 }
+      ]
+    },
+    {
+      "id": "steel-pickaxe",
+      "name": "Steel Pickaxe",
+      "category": "tools",
+      "tier": "tier-3",
+      "icon": "/icons/steel-pickaxe.png",
+      "craftedAt": ["machining-bench"],
+      "materials": [
+        { "itemId": "steel-ingot", "quantity": 8 },
+        { "itemId": "wood", "quantity": 4 },
+        { "itemId": "leather", "quantity": 2 }
+      ]
+    },
+    {
+      "id": "stone-axe",
+      "name": "Stone Axe",
+      "category": "tools",
+      "tier": "tier-1",
+      "icon": "/icons/stone-axe.png",
+      "craftedAt": ["crafting-bench"],
+      "materials": [
+        { "itemId": "stone", "quantity": 8 },
+        { "itemId": "wood", "quantity": 6 },
+        { "itemId": "fiber", "quantity": 4 }
+      ]
+    },
+    {
+      "id": "wood-wall",
+      "name": "Wood Wall",
+      "category": "constructions",
+      "tier": "tier-1",
+      "icon": "/icons/wood-wall.png",
+      "craftedAt": ["crafting-bench"],
+      "materials": [
+        { "itemId": "wood", "quantity": 20 }
+      ]
+    },
+    {
+      "id": "wood-floor",
+      "name": "Wood Floor",
+      "category": "constructions",
+      "tier": "tier-1",
+      "icon": "/icons/wood-floor.png",
+      "craftedAt": ["crafting-bench"],
+      "materials": [
+        { "itemId": "wood", "quantity": 12 }
+      ]
+    },
+    {
+      "id": "stone-furnace",
+      "name": "Stone Furnace",
+      "category": "deployables",
+      "tier": "tier-1",
+      "icon": "/icons/stone-furnace.png",
+      "craftedAt": ["crafting-bench"],
+      "materials": [
+        { "itemId": "stone", "quantity": 20 },
+        { "itemId": "wood", "quantity": 8 }
+      ]
+    },
+    {
+      "id": "anvil-bench",
+      "name": "Anvil Bench",
+      "category": "deployables",
+      "tier": "tier-2",
+      "icon": "/icons/anvil-bench.png",
+      "craftedAt": ["crafting-bench"],
+      "materials": [
+        { "itemId": "iron-ingot", "quantity": 10 },
+        { "itemId": "wood", "quantity": 20 },
+        { "itemId": "stone", "quantity": 12 }
+      ]
+    },
+    {
+      "id": "machining-bench",
+      "name": "Machining Bench",
+      "category": "deployables",
+      "tier": "tier-3",
+      "icon": "/icons/machining-bench.png",
+      "craftedAt": ["anvil-bench"],
+      "materials": [
+        { "itemId": "steel-ingot", "quantity": 20 },
+        { "itemId": "iron-ingot", "quantity": 10 },
+        { "itemId": "electronics", "quantity": 4 }
+      ]
+    },
+    {
+      "id": "crafting-bench",
+      "name": "Crafting Bench",
+      "category": "deployables",
+      "tier": "tier-1",
+      "icon": "/icons/crafting-bench.png",
+      "craftedAt": [],
+      "materials": [
+        { "itemId": "wood", "quantity": 10 },
+        { "itemId": "fiber", "quantity": 6 }
+      ]
+    },
+    {
+      "id": "iron-ingot",
+      "name": "Iron Ingot",
+      "category": "resources",
+      "tier": "tier-2",
+      "icon": "/icons/iron-ingot.png",
+      "craftedAt": ["stone-furnace"],
+      "materials": [
+        { "itemId": "iron-ore", "quantity": 2 }
+      ]
+    },
+    {
+      "id": "steel-ingot",
+      "name": "Steel Ingot",
+      "category": "resources",
+      "tier": "tier-3",
+      "icon": "/icons/steel-ingot.png",
+      "craftedAt": ["concrete-furnace"],
+      "materials": [
+        { "itemId": "iron-ore", "quantity": 2 },
+        { "itemId": "carbon-ore", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "category": "resources",
+      "tier": "tier-3",
+      "icon": "/icons/electronics.png",
+      "craftedAt": ["machining-bench"],
+      "materials": [
+        { "itemId": "copper-ingot", "quantity": 2 },
+        { "itemId": "gold-ore", "quantity": 1 }
+      ]
+    },
+    {
+      "id": "wood",
+      "name": "Wood",
+      "category": "resources",
+      "tier": null,
+      "icon": "/icons/wood.png",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "category": "resources",
+      "tier": null,
+      "icon": "/icons/stone.png",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "fiber",
+      "name": "Fiber",
+      "category": "resources",
+      "tier": null,
+      "icon": "/icons/fiber.png",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "leather",
+      "name": "Leather",
+      "category": "resources",
+      "tier": null,
+      "icon": "/icons/leather.png",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "iron-ore",
+      "name": "Iron Ore",
+      "category": "resources",
+      "tier": null,
+      "icon": "/icons/iron-ore.png",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "carbon-ore",
+      "name": "Carbon Ore",
+      "category": "resources",
+      "tier": null,
+      "icon": "/icons/carbon-ore.png",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "copper-ingot",
+      "name": "Copper Ingot",
+      "category": "resources",
+      "tier": "tier-2",
+      "icon": "/icons/copper-ingot.png",
+      "craftedAt": ["stone-furnace"],
+      "materials": [
+        { "itemId": "copper-ore", "quantity": 2 }
+      ]
+    },
+    {
+      "id": "copper-ore",
+      "name": "Copper Ore",
+      "category": "resources",
+      "tier": null,
+      "icon": "/icons/copper-ore.png",
+      "craftedAt": [],
+      "materials": []
+    },
+    {
+      "id": "gold-ore",
+      "name": "Gold Ore",
+      "category": "resources",
+      "tier": null,
+      "icon": "/icons/gold-ore.png",
+      "craftedAt": [],
+      "materials": []
+    }
+  ],
+  "stations": [
+    { "id": "crafting-bench", "name": "Crafting Bench", "category": "deployables", "tier": "tier-1" },
+    { "id": "stone-furnace", "name": "Stone Furnace", "category": "deployables", "tier": "tier-1" },
+    { "id": "anvil-bench", "name": "Anvil Bench", "category": "deployables", "tier": "tier-2" },
+    { "id": "machining-bench", "name": "Machining Bench", "category": "deployables", "tier": "tier-3" },
+    { "id": "concrete-furnace", "name": "Concrete Furnace", "category": "deployables", "tier": "tier-3" }
+  ]
+}
